@@ -1,8 +1,8 @@
-import React from "react";
-import { Canvas } from "@react-three/fiber";
-import Scene from "Scene";
+import React from 'react';
+import { Canvas } from '@react-three/fiber';
+import Scene from 'Scene';
 
-import css from "./App.module.scss";
+import css from './App.module.scss';
 
 const App = () => (
   <Canvas
