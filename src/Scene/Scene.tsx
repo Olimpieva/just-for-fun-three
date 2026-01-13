@@ -44,11 +44,36 @@ const Scene = () => {
             </Html>
           </primitive>
 
-          <Text font="./PressStart2P-Regular.ttf" fontSize={0.5} position={[5, 0, 0]} rotation-y={-1.25} maxWidth={2}>
-            have fun
+          <Text
+            font="./PressStart2P-Regular.ttf"
+            fontSize={0.2}
+            position={[5, 0, 0]}
+            rotation-y={-1.25}
+            maxWidth={2}
+            onClick={(e) => {
+              e.stopPropagation();
+              window.open('https://just-for-fun-gold.vercel.app/', '_blank');
+            }}
+            onPointerOver={(e) => {
+              e.stopPropagation();
+              const canvas = document.querySelector('canvas');
+              if (canvas) canvas.style.cursor = 'pointer';
+            }}
+            onPointerOut={(e) => {
+              e.stopPropagation();
+              const canvas = document.querySelector('canvas');
+              if (canvas) canvas.style.cursor = 'grab';
+            }}
+            onPointerMove={(e) => {
+              e.stopPropagation();
+            }}
+          >
+            full size
           </Text>
         </Float>
       </PresentationControls>
+
+
 
       <ContactShadows position-y={-1.4} opacity={0.4} scale={5} blur={2.4} />
     </>
