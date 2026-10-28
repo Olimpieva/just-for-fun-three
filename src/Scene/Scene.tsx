@@ -11,7 +11,7 @@ const Scene = () => {
     <>
       <color args={['#373a67']} attach="background" />
 
-      <Environment preset="park" />
+      <Environment files="/hdri/rooitou_park_1k.hdr" />
 
       <PresentationControls
         global
